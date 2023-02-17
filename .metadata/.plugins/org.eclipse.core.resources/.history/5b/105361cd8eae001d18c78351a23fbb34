@@ -1,0 +1,15 @@
+
+public class Identifier {
+
+	public static void main(String[] args) {
+		//식별하다 = 분별하여 알아보다
+		
+		//곡 지켜야 할 규칙(안 지킬시 에러가 발생할수 있습니다.)
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+
+public class VariableExample {
+	//변수 - 메모리상에 영역을 변수형으로 선언
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
