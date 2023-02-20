@@ -1,9 +1,11 @@
+package basic;
 /** (/**)  
  * 문서생성용 주석
  * 배포용 문서에 설명을 달아놓을때 사용합니다.
  * @author ict03-25
  * @version 1.0
  * @since 2023.02.17~
+ * @email ~
  */
 
 
@@ -22,11 +24,12 @@ public class CommentsExample {
 		//syso + ctrl + space    빠른 출력함수를 생성
 		//ctrl + F11             실행 단축키
 		//ctrl +  /              주석 처리 or 해제(원하는 문장에 커서 배치 후 사용)
-		//ctrl + alt  + 밑방향키   드래그 영역 밑으로복사
+		//ctrl + alt  + 밑방향키   드래그 영역 밑으로복사(원하는 문장에 커서 배치 후 사용)
 		//ctrl + shift+ /        선택영역 주석
 		
-		 System.out.println("Hello Java!");
-		 System.out.println("Hello World~"); 
+		System.out.println("Hello Java!");
+		System.out.println("Hello World~");
+		 
 
 		
 	}

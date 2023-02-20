@@ -1,11 +1,10 @@
+package basic;
 
 public class VariableExample {
 	
 	public static void main(String[] args) {
-		/*
-		 
-		 #  변수 (Variable)
-		 
+		/*	 
+		 #  변수 (Variable)		 
 		 1. 데이터가 저장되는 공간에 이름을 붙여놓은 것입니다.
 		 2. 변수는 생성할 때 변수에 저장되는 데이터의 크기와 모양에 따라 
 		    적당한 데이터 타입을 선언해야합니다.
@@ -17,9 +16,9 @@ public class VariableExample {
 		//변수의 선언: [자료형(데이터 타입)] [변수명];
 		int age;
 		
-		//변수의 초기화(처음값을 넣는행위,initialization(init)): 
-		//[변수명] = [값];
+		//변수의 초기화(처음값을 넣는행위,initialization(init)): 		
 		// = -> assignment(할당한다)
+		//[변수명] = [값];
 		age = 40; //좌측에 영역에다가 우측의 값을 대입(할당)한다.
 		
 		
@@ -30,7 +29,7 @@ public class VariableExample {
 		//처음 만들 때 한번만 가능합니다.
 		
 		int score = 90;
-		//int score = 95;(X)
+		//int score = 95;(X) //변수중복선언
 		//변수는 하나당 값을 하나밖에 대입할수 없기 떄문에 
 		//기존값이 소멸하고 새로운 값이 할당됩니다.
 		score = 95; //이전값을 대체하여 들어감
@@ -48,12 +47,12 @@ public class VariableExample {
 		
 		//변수는 자료형이(데이터타입)이 달라도 
 		//이름이 동일하다면 중복선언 할수 없습니다.
-		//String name = "홍길동";
+		String name = "홍길동";
 //		int name = 1004; (x)
 		
 		//선언 및 초기화하지 않은 변수는 사용이 불가능합니다.(값이 없는 변수는 사용불가)
 //		int result = myScore + num; (x)
-//		int result;
+		int result;
 //		System.out.println(result); //(x)
 		
 	}
