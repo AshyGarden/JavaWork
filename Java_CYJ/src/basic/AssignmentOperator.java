@@ -15,8 +15,9 @@ public class AssignmentOperator {
 		int b = 5;
 		
 		a += 3; // a = a + 3;
-		b = +3; // b = +3;(이러면 b가 3이됨)
+		b =+ 3; // b = +3;(이러면 b가 +3이라는 값이 됨)
 		System.out.println(a);
+		System.out.println(b);
 		System.out.println("---------------------------");
 		
 		//a=8;

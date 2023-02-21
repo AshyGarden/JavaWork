@@ -5,7 +5,7 @@ public class FloatExample {
 	public static void main(String[] args) {
 
 		//실수 리터럴의 기본데이터타입은 double이다.
-		float f1 = 7.12345f; //double을 float으로 변환할수 없다. 뒤에f를 덧붙임
+		float f1 = 7.12345f; //double을 float으로 변환할수 없다. 뒤에 f를 덧붙임
 		double d1 = 7.12345; 
 		
 		/////////////////////////////

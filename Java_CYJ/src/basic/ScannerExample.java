@@ -23,7 +23,7 @@ public class ScannerExample {
 		 nextDouble():실수데이터를 입력받음.
 		 */ 
 		System.out.print("이름을 입력하세요: "); 
-//		String name = sc.next(); //next(): 공백이 없는 문자열을 입력받음,공백이 있으면 공백전까지만 받음
+//		String name = sc.next(); //next(): 공백이 있으면 공백전까지만 받음
 		String name = sc.nextLine();
 		System.out.printf("\n반갑습니다 %s님",name); //만약 최 용준->'최'만 출력
 		

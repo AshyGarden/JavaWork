@@ -18,13 +18,15 @@ public class CastingExample2 {
 		char c = (char) i; //들어가려는 쪽의 타입을 값 앞에 붙여줌
 		System.out.println("72의 문자값:" + c);
 
+		
+		//값의 손실
 		double d = 4.98765;
 		int j = (int) d;
-		System.out.println(j); //정수형값은 4만 남기고버려짐
+		System.out.println(j); //정수형값 4만 남기고 소수점이하 버려짐
 		
 		int k = 1000;
 		byte b = (byte) k;
-		System.out.println(b); //-24 = 2진수 표현시 1111 1110의 값
+		System.out.println(b); //-24 = 2진수 표현시 (-)1111 1110의 값
 		
 		
 	}

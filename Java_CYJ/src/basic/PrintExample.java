@@ -24,7 +24,7 @@ public class PrintExample {
 		 # 포매팅 서식 문자 종류)(printf만 사용)
 		 %d: 부호가 있는 정수데이터(decimal)
 		 %f: 실수데이터(floation point) 
-		 %s: 문자열(string)
+		 %s: 문자열(String)
 		 * */
 		
 		// # 탈출코드(escape code) -> print, println, printf 모두동작
