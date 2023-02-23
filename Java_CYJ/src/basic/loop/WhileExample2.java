@@ -15,7 +15,7 @@ public class WhileExample2 {
 		}
 		System.out.println("<-48~150사이의 8의 배수");
 		
-		//또다른 답안
+		//또다른 답안(추천X)
 //		int n = 48;
 //		while(n <= 150) {
 //			System.out.print(n + " ");
@@ -71,6 +71,22 @@ public class WhileExample2 {
 		}
 		System.out.println("숫자 258의 배수 갯수: "+ count1);
 		
+		//모범답안
+		/*
+		int j = 1; 
+		int count = 0; //배수의 개수를 기억해줄 변수
+		while(j <= 30000) {
+			if(j % 258 == 0) {
+				count++;
+				//System.out.print(j + " ");
+			}
+			j++;
+		} 
+		System.out.println("1~30000중 258의 배수의 개수: " + count+ "개");  
+		 */
+		
+		
+		
 		//1000의 약수의 개수를 구하시오
 		
 		int count2 =0;
@@ -84,6 +100,18 @@ public class WhileExample2 {
 		}
 		
 		System.out.println("->숫자 1000의 약수 갯수: "+ count2);
+		//모범답안
+		/*
+		int k = 1; 
+		int cnt = 0; //배수의 개수를 기억해줄 변수
+		while(k <= 30000) {
+			if(1000 % k == 0) {
+				cnt++;
+			}
+			k++;
+		} 
+		System.out.printf("1000의 약수의 개수: %d개", cnt);  
+		 */
 
 	}
 

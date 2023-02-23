@@ -94,7 +94,7 @@ public class SwitchQuiz {
 		
 		//방법2
 		int result = 0;
-		boolean flag = false;
+		boolean flag = false; //참거짓 플래그
 		
 		switch(operator) {
 		
