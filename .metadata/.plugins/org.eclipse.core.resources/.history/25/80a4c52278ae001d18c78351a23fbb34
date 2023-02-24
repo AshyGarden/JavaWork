@@ -1,8 +1,0 @@
-//이 파일은 주석을 연습하는 파일입니다.
-public class CommentsExample {
-	
-	
-	public static void main(String[] args) {
-		
-	}
-}

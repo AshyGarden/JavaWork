@@ -21,15 +21,15 @@ public class LoopNesting2 {
 		int count = 0;
 		
 		System.out.print("소수: ");
-		for(int i=2; i<=input; i++) 
-		{      //i: 2부터 input 값까지 세주기
-			for(int j=1; j<=i; j++) 
-			{      //입력되고 있는 i에 대해 j를 1부터 i까지 세주기
-				if(i%j==0) count++;	       //만약 i가j로 나누어 떨어지면 count++		
-			}
-			//for문 탈출시 count증감동결
-			if(count==2) 
-			{                 //count=2 ->소수(1과 자기자신)
+		for(int i=2; i<=input; i++) //i: 2부터 input 값까지 세주기
+		{      
+			for(int j=1; j<=i; j++) //입력되고 있는 i에 대해 j를 1부터 i까지 세주기
+			{      
+				if( i % j == 0) count++;  //만약 i가j로 나누어 떨어지면 count++		
+			} //for문 탈출시 count증감동결
+			
+			if(count==2)  //count=2 ->소수(1과 자기자신)
+			{                
 				totalPrime++;              //소수개수++
 				System.out.print(i + " "); //이때 i는 소수이므로 출력해줌
 			}
