@@ -26,11 +26,11 @@ public class ArrayInsertQuiz {
 		
 		String[] foods = new String[50]; //
 		Scanner sc = new Scanner(System.in);
-		boolean flag = true;
+		boolean flag;
 		for(int i=0; i<foods.length; i++) {
 			System.out.print("아 배고프다: "); //
 			String food = sc.next();
-			
+			flag = true;
 			if(food.equals("먹고싶다")){                //탈출문
 //				System.out.println("입력종료");
 				System.out.println("이런거 먹고싶었네");
@@ -41,11 +41,11 @@ public class ArrayInsertQuiz {
 				if(food.equals(foods[j])) {
 					flag =false;
 					System.out.println("는 이미 적은 음식.");
-					break;
 				} 
 			}	    
-			if(flag)
-				foods[i] = food;    //중복이 없으니 		
+			if(flag) 
+				foods[i] = food;    //중복이 없으니}
+							 		
 		}
 		
 		for(String n : foods) {
