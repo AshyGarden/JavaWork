@@ -5,13 +5,13 @@ public class BreakExample1 {
 	public static void main(String[] args) {
 		for(int i=1; i<=10; i++)
 		{
-			if(i>7)	break;                    //i가 7초과 일때 반복문을 꺠고 탈출
+			if(i>7)	break;                    //i가 7 초과 일때 반복문을 꺠고 탈출
 			System.out.print(i+" ");  
 		}
 		System.out.println("\n반복문 종료");
 		
 		/*
-		 - 내부 반복문에 포함된 brea로 바깥쪽반복문까지 한번에 종료하고싶다면
+		 - 내부 반복문에 포함된 break로 바깥쪽반복문까지 한번에 종료하고싶다면
 		   바깥쪽 반복문에 label을 붙인다.
 		   break 선언시 label을 함께 선언 
 		 */
