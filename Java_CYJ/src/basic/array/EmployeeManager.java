@@ -15,10 +15,8 @@ public class EmployeeManager {
 		String[] names = new String[100];
 		int[] ages =  new int[100];
 		String[] departments = new String[100];
-		//String whileBreaker = "돌아가기";
-		boolean flag;
-		//실제로 입력된 데이터(사원의 정보)의 개수를 체크하는변수.
-		int count= 0;
+		//String whileBreaker = "돌아가기";	
+		int count= 0; //실제로 입력된 데이터(사원의 정보)의 개수를 체크하는변수.
 		
 		while(true) {
 			System.out.println("\n=======사원관리프로그램===========");
