@@ -34,8 +34,9 @@ public class MethodExample1 {
 	
 	public static void main(String[] args) {
 		
-		
-		
+		int total = calcTotal(10); //함수를 부르고 값을 대입
+		System.out.println(total);
+		System.out.println("1~100까지 누적합: "+ calcTotal(100));
 
 	}
 	
