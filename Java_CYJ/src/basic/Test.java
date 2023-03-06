@@ -1,4 +1,4 @@
-package oop;
+package basic;
 
 //작성중인 패키지와 다른곳에 위치한 클래스를 사용하련 import선언이 필요
 //import oop.fruit.Apple;
