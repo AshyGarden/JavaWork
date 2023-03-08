@@ -15,7 +15,7 @@ public class MainClass {
 		System.out.println("------------------");
 		Child c = new Child();
 		c.n1 =1 ; //부모에게 물려받은속성
-		c.n2 =2 ; //자식의 고유속성ㅉ
+		c.n2 =2 ; //자식의 고유속성
 		
 		c.method1();
 		c.method2();
@@ -50,7 +50,7 @@ public class MainClass {
 		//다형성이 한 번도 발생하지 않은 경우에는
 		//강제 형 변환을 사용할 수 없습니다.
 		Parent ppp = new Parent();
-//		Child c3 = (Child) ppp; (x)
+//		Child c3 = (Child) ppp; (x) //runtime error
 
 	}
 

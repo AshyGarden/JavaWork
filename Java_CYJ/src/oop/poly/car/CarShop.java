@@ -11,11 +11,11 @@ public class CarShop {
 	 */
 	
 	public void carPrice(Car c) {
-		if(c instanceof Sonata){
+		if(c instanceof Sonata){ //전달된 객체가 소나타 타입의 객체를 가질수있는가?
 			System.out.println("소나타의 가격은 3천만원입니다.");
-		} else if(c instanceof Tesla) {
+		} else if(c instanceof Tesla) { //전달된 객체가 테슬라 타입의 객체를 가질수있는가?
 			System.out.println("테슬라의 가격은 7천만원입니다.");
-		} else if(c instanceof Porsche) {
+		} else if(c instanceof Porsche) { //전달된 객체가 포르쉐 타입의 객체를 가질수있는가?(포르쉐가 이객체를 가질수 있나(X))
 			System.out.println("포르쉐의 가격은 2억 4천만원입니다.");
 		}
 	}

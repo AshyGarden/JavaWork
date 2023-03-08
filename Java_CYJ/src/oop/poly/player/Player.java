@@ -1,4 +1,4 @@
-package oop.this_super;
+package oop.poly.player;
 
 public class Player {
 	String name;
@@ -19,7 +19,7 @@ public class Player {
 	
 	//객체마다 숨겨진필드(this)를 가지고있음
 	Player(){
-		System.out.println("Player의 기본생성자 호출!");
+		//System.out.println("Player의 기본생성자 호출!");
 //		System.out.println("this의 주소값: "+this);
 	this.level = 1;
 	this.atk = 3;
@@ -28,7 +28,7 @@ public class Player {
 	
 	Player(String name){
 		this();//같은 클래스에 다른생성자 호출
-		System.out.println("Player의 2번 생성자 호출!");
+		//System.out.println("Player의 2번 생성자 호출!");
 //		System.out.println("this의 주소값: "+this);
 //		level = 1;
 //		atk = 3;

@@ -48,18 +48,15 @@ public class MainClass {
 		
 		System.out.println("----------------------------");
 		
-		Car c = kim.buyCar("테슬라");
+		Car c = kim.buyCar("테슬라"); //부모 함수로 자식 정의
 		c.run();
-		Tesla t5 = (Tesla) c;
+		Tesla t5 = (Tesla) c; //자식타입으로 강제 타입 변환을 사용
 		t5.enterMembership();
 		
 		CarShop shop = new CarShop();
 		shop.carPrice(s1);
 		shop.carPrice(new Tesla());
-		shop.carPrice(kim.buyCar("포르쉐")); //return new Porsche
-		shop.carPrice(s3);
-		
-		
+		shop.carPrice(kim.buyCar("포르쉐")); //return new Porsche	
 		
 	}
 

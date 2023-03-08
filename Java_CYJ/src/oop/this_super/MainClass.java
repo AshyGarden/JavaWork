@@ -32,6 +32,10 @@ public class MainClass {
 		m1.charaterInfo();
 		hunter h1 = new hunter("사냥꾼");
 		h1.charaterInfo();
+		System.out.println("----------------------------");
+
+		w1.Attack(m1);
+		m1.Attack(h1);
 	}
 
 }
