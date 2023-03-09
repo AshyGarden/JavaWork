@@ -26,17 +26,27 @@ public class ScoreMain {
 		Scanner sc = new Scanner(System.in);
 		Score[] students = new Score[100];
 		boolean cursorName = false, cursorKor = false, cursorEng = false, cursorMath = false;	
+		Score student = new Score("",0,0,0);
 	
 		inputScore: while(true) {
-			for(int i=0; i<students.length; i++) {
+			for(int i=0; i<students.length; i++) {		
+				System.out.println((i+1)+"번째 입력!");
 				if(cursorName == false) { //이름
 					try {
-						System.out.print("국어 점수: ");
-						 = sc.next();
-						cursorName = true;
+						System.out.print("이름 : ");
+						student.setName(sc.next());;	
+						
+						if(student.getName().equals("그만"))
+							break inputScore;
+			
+						 cursorName = true; 						 
+					} catch(NullPointerException e) { //빈칸방지?
+						cursorName = false;
+						System.out.println("무언가 입력을 입력하세요!");
+						sc.nextLine();
 					} catch(InputMismatchException e) { //자바 1.7버전 이상부터사용가능, 오류처리문 2개묶기
 						cursorName = false;
-						System.out.println("정수를 입력하세요!");
+						System.out.println("이름을 입력하세요!");
 						sc.nextLine();
 					} catch (Exception e) {
 						cursorName = false;
@@ -44,55 +54,76 @@ public class ScoreMain {
 						System.out.println("에러원인: "+e.getMessage());
 						sc.nextLine();
 					}
-				}
-				
-				if(cursorKor == false) {//국어점수
+				} else if(cursorKor == false) {
 					try {
-						System.out.print("국어 점수: ");
-						num1 = sc.nextInt();
-						cursorName = true;
+						System.out.print("국어 점수 : ");
+						student.setKorScore(sc.nextInt());	
+						cursorKor = true;
 					} catch(InputMismatchException e) { //자바 1.7버전 이상부터사용가능, 오류처리문 2개묶기
-						cursorName = false;
-						System.out.println("정수를 입력하세요!");
-						sc.nextLine();
-					} catch (Exception e) {
-						cursorName = false;
-						System.out.println("알수없는 에러발생!");
-						System.out.println("에러원인: "+e.getMessage());
-						sc.nextLine();
-					}			
-				}
-				
-				if(right2 == false) {
-					try {
-						System.out.print("정수2: ");
-						num2 = sc.nextInt();	
-						right2 = true;
-					} catch(InputMismatchException e) { //자바 1.7버전 이상부터사용가능, 오류처리문 2개묶기
-						right2 = false;
+						cursorKor = false;
 						System.out.println("정수를 입력하세요!");		
 						sc.nextLine();
 					}  catch (Exception e) {
-						right2 = false;
+						// = false;
+						System.out.println("알수없는 에러발생!");
+						System.out.println("에러원인: "+e.getMessage());
+						sc.nextLine();
+					}			
+				} else if(cursorEng == false) {
+					try {
+						System.out.print("영어 점수: "); //영어
+						student.setEngScore(sc.nextInt());	
+						cursorEng = true;
+					} catch(InputMismatchException e) { //자바 1.7버전 이상부터사용가능, 오류처리문 2개묶기
+						cursorEng = false;
+						System.out.println("정수를 입력하세요!");		
+						sc.nextLine();
+					}  catch (Exception e) {
+						cursorEng = false;
+						System.out.println("알수없는 에러발생!");
+						System.out.println("에러원인: "+e.getMessage());
+						sc.nextLine();
+					}			
+				} else if(cursorMath == false) {
+					try {
+						System.out.print("수학 점수: ");
+						student.setMathScore(sc.nextInt());	
+						cursorMath = true;
+					} catch(InputMismatchException e) { //자바 1.7버전 이상부터사용가능, 오류처리문 2개묶기
+						cursorMath = false;
+						System.out.println("정수를 입력하세요!");		
+						sc.nextLine();
+					}  catch (Exception e) {
+						cursorMath = false;
 						System.out.println("알수없는 에러발생!");
 						System.out.println("에러원인: "+e.getMessage());
 						sc.nextLine();
 					}			
 				}
 				
-				if(cursorName == true && right2 == true)
-					Score student = new Score(student.setName(),student.setKorScore(),student.setEngScore(),student.setMathScore());					
-				else {
-					System.out.println("현재정수1: "+ num1+" / 현재정수2: "+num2);
-				}				
+				students[i] = student;
 			}
-			
-	
 		}
 		
 		
+		for(int i =0; i<students.length; i++) {
+			try {
+				students[i].scoreInfo();
+
+			} catch(NullPointerException e) {
+				System.out.println("여기까지가 점수입니다.");
+				break;
+			} catch (Exception e) {
+				cursorMath = false;
+				System.out.println("알수없는 에러발생!");
+				System.out.println("에러원인: "+e.getMessage());
+				sc.nextLine();
+			}	
+			
+			
+		}
 		
-		
+		sc.close();
 
 	}
 

@@ -75,7 +75,7 @@ public class Score {
 	}
 
 	public void scoreInfo() {
-		System.out.printf("이름: %s, 국어: %d, 영어: %d,수학: %d,총점: %d,평균: %.1f",
+		System.out.printf("이름: %s, 국어: %d, 영어: %d,수학: %d,총점: %d,평균: %.1f\n",
 				this.getName(),this.getKorScore(),this.getEngScore(),this.getMathScore(),
 				this.getTotalScore(), this,getAverage());
 	}
