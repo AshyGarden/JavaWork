@@ -8,7 +8,7 @@ public class MainClass {
 //		s1.method1();
 //		s1.method2();
 //		
-		Singleton s1 = Singleton.getInstance();
+		Singleton s1 = Singleton.getInstance(); //1개만 생성된 객체를 부름(모두 같은 주소만 옴)
 		Singleton s2 = Singleton.getInstance();
 		Singleton s3 = Singleton.getInstance();
 		Singleton s4 = Singleton.getInstance();

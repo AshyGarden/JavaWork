@@ -15,6 +15,7 @@ public class MainClass {
 		
 		System.out.println(kim.name); //호출은 상관(X)
 
+		
 	}
 
 }

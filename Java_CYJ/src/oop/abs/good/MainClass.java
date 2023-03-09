@@ -16,6 +16,7 @@ public class MainClass {
 		
 		//추상클래스는 스스로의 객체를 생성할 수 없습니다.
 //		HeadStore h = new HeadStore(); (x)
+		
 		HeadStore s = new SeoulStore();
 		s.orderApple();
 		s.orderBanana();

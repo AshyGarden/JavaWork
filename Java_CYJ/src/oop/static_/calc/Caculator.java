@@ -1,4 +1,4 @@
-package oop.static_.clac;
+package oop.static_.calc;
 
 public class Caculator {
 
@@ -9,7 +9,7 @@ public class Caculator {
 	 */
 	
 	String color;
-	static double pi = 3.141592;
+	static double pi = 3.141592; //값이 불변한다면 static으로
 	
 	/*
 	 - 메서드 내부에서 non-static 데이터를 참조하고 있는 메서드는

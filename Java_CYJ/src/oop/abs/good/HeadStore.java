@@ -21,6 +21,11 @@ public abstract class HeadStore {
 	  일반 멤버변수 및 메서드도 얼마든지 선언이 가능합니다.
 	 */
 	public int i;
+	
+	public HeadStore() {
+		System.out.println("HeadStore의 생성자!");
+	}
+	
 	public abstract void orderApple();
 	public abstract void orderBanana();
 	public abstract void orderGrape();

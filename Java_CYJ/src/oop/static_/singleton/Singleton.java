@@ -5,9 +5,7 @@ public class Singleton {
 	 #싱글톤 디자인 패턴: 클래스의 객체를 단 1개로 제한하기 위한 코드 디자인 패턴 
 	 
 	 1. 외부에서 이 클래스의 객체를 생성하지 못하게 생성자를 단 1개만 선언
-	    private 접근 제한을 붙임.
-	 
-	 
+	    private 접근 제한을 붙임. 
 	 */
 	private Singleton() {
 		System.out.println("객체 생성!");
