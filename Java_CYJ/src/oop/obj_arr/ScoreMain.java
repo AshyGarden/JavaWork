@@ -25,7 +25,7 @@ public class ScoreMain {
 		
 		Scanner sc = new Scanner(System.in);
 		Score[] students = new Score[100];
-		boolean cursorName = false, cursorKor = false, cursorEng = false, cursorMath = false;	
+		boolean cursorName = false, cursorNum = false;	
 		Score student = new Score("",0,0,0);
 	
 		inputScore: while(true) {
@@ -36,10 +36,23 @@ public class ScoreMain {
 						System.out.print("이름 : ");
 						student.setName(sc.next());;	
 						
-						if(student.getName().equals("그만"))
+						if(student.getName().equals("그만")) {
+							students[i] = null;
 							break inputScore;
+						}
 			
-						 cursorName = true; 						 
+						 cursorName = true; 
+						 
+						 System.out.print("국어 점수 : ");
+						 student.setKorScore(sc.nextInt());	
+						 
+						 System.out.print("영어 점수: "); //영어
+						 student.setEngScore(sc.nextInt());	
+						 
+						 System.out.print("수학 점수: ");
+						 student.setMathScore(sc.nextInt());	
+						 cursorNum = true;
+						 
 					} catch(NullPointerException e) { //빈칸방지?
 						cursorName = false;
 						System.out.println("무언가 입력을 입력하세요!");
@@ -54,73 +67,45 @@ public class ScoreMain {
 						System.out.println("에러원인: "+e.getMessage());
 						sc.nextLine();
 					}
-				} else if(cursorKor == false) {
-					try {
-						System.out.print("국어 점수 : ");
-						student.setKorScore(sc.nextInt());	
-						cursorKor = true;
-					} catch(InputMismatchException e) { //자바 1.7버전 이상부터사용가능, 오류처리문 2개묶기
-						cursorKor = false;
-						System.out.println("정수를 입력하세요!");		
-						sc.nextLine();
-					}  catch (Exception e) {
-						// = false;
-						System.out.println("알수없는 에러발생!");
-						System.out.println("에러원인: "+e.getMessage());
-						sc.nextLine();
-					}			
-				} else if(cursorEng == false) {
-					try {
-						System.out.print("영어 점수: "); //영어
-						student.setEngScore(sc.nextInt());	
-						cursorEng = true;
-					} catch(InputMismatchException e) { //자바 1.7버전 이상부터사용가능, 오류처리문 2개묶기
-						cursorEng = false;
-						System.out.println("정수를 입력하세요!");		
-						sc.nextLine();
-					}  catch (Exception e) {
-						cursorEng = false;
-						System.out.println("알수없는 에러발생!");
-						System.out.println("에러원인: "+e.getMessage());
-						sc.nextLine();
-					}			
-				} else if(cursorMath == false) {
-					try {
-						System.out.print("수학 점수: ");
-						student.setMathScore(sc.nextInt());	
-						cursorMath = true;
-					} catch(InputMismatchException e) { //자바 1.7버전 이상부터사용가능, 오류처리문 2개묶기
-						cursorMath = false;
-						System.out.println("정수를 입력하세요!");		
-						sc.nextLine();
-					}  catch (Exception e) {
-						cursorMath = false;
-						System.out.println("알수없는 에러발생!");
-						System.out.println("에러원인: "+e.getMessage());
-						sc.nextLine();
-					}			
-				}
+				} 
+				
+				//else if(cursorNum == false) {
+//					try {
+//					} catch(InputMismatchException e) { //자바 1.7버전 이상부터사용가능, 오류처리문 2개묶기
+//						cursorNum = false;
+//						System.out.println("정수를 입력하세요!");		
+//						sc.nextLine();
+//					}  catch (Exception e) {
+//						cursorNum = false;
+//						System.out.println("알수없는 에러발생!");
+//						System.out.println("에러원인: "+e.getMessage());
+//						sc.nextLine();
+//					}			
+//				}
 				
 				students[i] = student;
+				cursorName = false; 
+			    cursorNum  = false;
 			}
 		}
 		
 		
 		for(int i =0; i<students.length; i++) {
 			try {
+				
 				students[i].scoreInfo();
+				System.out.printf("총점: %d, 평균: %d\n",students[i].getTotalScore(),students[i].getAverage());
 
 			} catch(NullPointerException e) {
 				System.out.println("여기까지가 점수입니다.");
 				break;
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("null 참조오류!");
 			} catch (Exception e) {
-				cursorMath = false;
 				System.out.println("알수없는 에러발생!");
-				System.out.println("에러원인: "+e.getMessage());
+				System.out.println("에러원인: "+ e.getMessage());
 				sc.nextLine();
-			}	
-			
-			
+			}		
 		}
 		
 		sc.close();

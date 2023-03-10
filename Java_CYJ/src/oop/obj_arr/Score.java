@@ -32,7 +32,7 @@ public class Score {
 	}
 
 	public void setTotalScore(int totalScore) {
-		this.totalScore = korScore+engScore+mathScore;
+		this.totalScore = this.korScore + this.engScore + this.mathScore;
 	}
 
 	public double getAverage() {
@@ -40,7 +40,7 @@ public class Score {
 	}
 
 	public void setAverage(double average) {
-		this.average = totalScore / 3.0;
+		this.average = this.totalScore / 3.0;
 	}
 
 	public String getName() {
@@ -75,9 +75,8 @@ public class Score {
 	}
 
 	public void scoreInfo() {
-		System.out.printf("이름: %s, 국어: %d, 영어: %d,수학: %d,총점: %d,평균: %.1f\n",
-				this.getName(),this.getKorScore(),this.getEngScore(),this.getMathScore(),
-				this.getTotalScore(), this,getAverage());
+		System.out.printf("이름: %s, 국어: %d, 영어: %d,수학: ",
+				this.getName(),this.getKorScore(),this.getEngScore(),this.getMathScore());
 	}
 	
 	
