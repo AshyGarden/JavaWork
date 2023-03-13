@@ -17,7 +17,7 @@ public class ArraysQuiz {
 		Arrays.sort(participant);
 		Arrays.sort(completion);
 		
-		for(int i=0; i<completion.length; i++) {
+		for(int i=0; i<participant.length; i++) {
 			if(!(completion[i].equals(participant[i]))){
 				leftover = participant[i];
 				break;
@@ -25,7 +25,30 @@ public class ArraysQuiz {
 		}
 			
 		return leftover;
-		//return "";
+	}
+	
+	public static String solution2(String[] participant, String[] completion) {
+		
+		//String leftover = null;
+		Arrays.sort(participant);
+		Arrays.sort(completion);
+		
+//		//방법1
+//		for(int i=0; i<completion.length; i++) {
+//			if(!(participant[i].equals(completion[i]))){
+//				return participant[i];
+//			}
+//		}
+		
+		//방법2
+		for(int i=0; i<completion.length; i++) {
+			int b = Arrays.binarySearch(completion, participant[i]);
+			if(b<0){ //없으면 -1 리턴
+				return participant[i];				
+			}		
+		}
+		
+		return participant[participant.length-1];
 	}
 	
 	public static void main(String[] args) {
@@ -38,7 +61,8 @@ public class ArraysQuiz {
 		System.out.println(Arrays.toString(participant));
 		System.out.println(Arrays.toString(completion));
 		
-		System.out.println("완주에 실패한 사람: "+ solution(participant, completion));
+		System.out.println("Sol1) 완주에 실패한 사람: "+ solution(participant, completion));
+		System.out.println("Sol2) 완주에 실패한 사람: "+ solution2(participant, completion));
 	}
 
 }
