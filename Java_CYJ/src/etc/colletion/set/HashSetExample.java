@@ -70,7 +70,8 @@ public class HashSetExample {
 		set.remove("JSP");
 		System.out.println(set);
 		
-		//set.Clear();
+		set.clear();
+		System.out.println(set);
 	}
 
 }

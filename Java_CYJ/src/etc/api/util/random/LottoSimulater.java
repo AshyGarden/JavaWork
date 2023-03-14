@@ -40,13 +40,15 @@ public class LottoSimulater {
 		  당첨번호들을 피해서 보너스번호 하나만 뽑아 주세요.
 		  범위는 마찬가지로 1 ~ 45 사이의 난수입니다.
 		 */
-		int bonusNum;
+		int bonusNum; //보너스번호
 		while(true) {
-			bonusNum = r.nextInt(45)+1;
+			bonusNum = r.nextInt(45)+1; //1~45사이의번호
 			if(!lottoNums.contains(bonusNum)) {
 				return bonusNum;	
-			}		
+			}
 		}
+	
+		
 	}
 	
 	public static void checkLottoNumber(List<Integer> lottoNums,List<Integer> buyNums, int bonus) {
@@ -115,7 +117,7 @@ public class LottoSimulater {
 			System.out.printf("%d번째 복권!\n",buyCount+1);
 			buyCount++;
 			
-			while(inputLotto.size() < 6) {
+			while(inputLotto.size() < 6) { //내가 n번째에 산 복권
 				int num = r.nextInt(45) + 1;
 				if(!inputLotto.contains(num)) {
 					inputLotto.add(num);				
@@ -138,13 +140,13 @@ public class LottoSimulater {
 		System.out.print(lotto + " + ");
 		System.out.print(createBonusNum(lotto));
 		System.out.println("\nLotto에 쓴 돈: " + spendMoney + "원");
-		System.out.printf("1등 당첨횟수: %d\n", prize1);
-		System.out.printf("2등 당첨횟수: %d\n", prize2);
-		System.out.printf("4등 당첨횟수: %d\n", prize3);
-		System.out.printf("4등 당첨횟수: %d\n", prize4);
-		System.out.printf("5등 당첨횟수: %d\n", prize5);
-		System.out.printf("꽝  당첨횟수: %d\n", failCnt);
-		
+		System.out.printf("1등 당첨횟수: %d회\n", prize1);
+		System.out.printf("2등 당첨횟수: %d회\n", prize2);
+		System.out.printf("4등 당첨횟수: %d회\n", prize3);
+		System.out.printf("4등 당첨횟수: %d회\n", prize4);
+		System.out.printf("5등 당첨횟수: %d회\n", prize5);
+		System.out.printf("꽝  당첨횟수: %d회\n", failCnt);
+		System.out.printf("내가 커피 마실확률: %.12f%%", 1.0/buyCount);
 	}
 
 }
